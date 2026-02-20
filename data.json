@@ -1,0 +1,90 @@
+{
+  "personalInfo": {
+    "name": "Maliha",
+    "title": "Graphic Designer & Visual Strategist",
+    "bio": "I don't just make things look pretty. I craft strategic visual identities that command attention, communicate value, and convert audiences into loyal clients. Let's build a brand that impossible to ignore.",
+    "socials": {
+      "messenger": "https://m.me/yourusername",
+      "instagram": "https://instagram.com/yourusername"
+    }
+  },
+  "works": [
+    {
+      "id": 1,
+      "title": "Jersey Design - Front",
+      "category": "Apparel Design",
+      "image": "assets/images/jersey front.png",
+      "description": "Custom jersey design focusing on dynamic team branding."
+    },
+    {
+      "id": 2,
+      "title": "Jersey Design - Back",
+      "category": "Apparel Design",
+      "image": "assets/images/back jersey.png",
+      "description": "Back view of the custom jersey design."
+    },
+    {
+      "id": 3,
+      "title": "ID Card Design",
+      "category": "Corporate Identity",
+      "image": "assets/images/id_card.jpg",
+      "description": "Professional corporate ID card layout."
+    },
+    {
+      "id": 4,
+      "title": "Terrain Visualization",
+      "category": "3D / Visualization",
+      "image": "assets/images/with terrain.png",
+      "description": "Architectural or landscape visualization with terrain elements."
+    },
+    {
+      "id": 5,
+      "title": "Clean Visualization",
+      "category": "3D / Visualization",
+      "image": "assets/images/without terrain.png",
+      "description": "Clean architectural visualization without terrain."
+    },
+    {
+      "id": 6,
+      "title": "Profile Graphic",
+      "category": "Social Media",
+      "image": "assets/images/elev profile maruf.png",
+      "description": "Custom profile graphic design."
+    },
+    {
+      "id": 7,
+      "title": "Circle Graphic",
+      "category": "Branding",
+      "image": "assets/images/circle 23 maruf.png",
+      "description": "Circular badge or logo design."
+    },
+    {
+      "id": 8,
+      "title": "Front View Design",
+      "category": "Product Design",
+      "image": "assets/images/front.png",
+      "description": "Front view of product or apparel."
+    },
+    {
+      "id": 9,
+      "title": "Back View Design",
+      "category": "Product Design",
+      "image": "assets/images/back.png",
+      "description": "Back view of product or apparel."
+    },
+    {
+      "id": 10,
+      "title": "Graphic Element i5",
+      "category": "Illustration",
+      "image": "assets/images/i5.png",
+      "description": "Custom graphic element or illustration."
+    },
+    {
+      "id": 11,
+      "title": "Project Showcase",
+      "category": "Miscellaneous",
+      "image": "assets/images/WhatsApp Image 2025-04-13 at 6.30.17 PM.jpeg",
+      "description": "Recent project showcase."
+    }
+  ]
+}

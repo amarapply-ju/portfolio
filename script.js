@@ -1,0 +1,210 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Fetch data and populate portfolio
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            populatePersonalInfo(data.personalInfo);
+            // 1. Setup Filters first
+            setupFilters(data.works);
+            // 2. Populate Gallery initially with all works
+            populateGallery(data.works);
+            // 3. Setup Marquee
+            setupHeroMarquee(data.works);
+            // 4. Initial Scroll Animation setup
+            setupScrollAnimation();
+        })
+        .catch(error => console.error('Error loading portfolio data:', error));
+
+    // Lightbox functionality
+    setupLightbox();
+});
+
+// MARQUEE (Film Reel)
+function setupHeroMarquee(works) {
+    const marqueeTrack = document.getElementById('hero-bg');
+    if (!works || works.length === 0) return;
+
+    // We need enough items to scroll smoothly. If few, duplicate them.
+    let marqueeItems = [...works, ...works]; // Duplicate at least once
+    if (marqueeItems.length < 10) {
+        marqueeItems = [...marqueeItems, ...marqueeItems];
+    }
+
+    marqueeTrack.innerHTML = ''; // Clear existing
+
+    marqueeItems.forEach(work => {
+        const item = document.createElement('div');
+        item.className = 'marquee-item';
+        item.innerHTML = `<img src="${work.image}" alt="" loading="lazy">`;
+        marqueeTrack.appendChild(item);
+    });
+    
+    // Clone content for seamless loop
+    const clone = marqueeTrack.innerHTML;
+    marqueeTrack.innerHTML += clone;
+}
+
+// FILTERS
+let allWorks = []; // Store globally to filter against
+
+function setupFilters(works) {
+    allWorks = works; // Save for filtering
+    const filterContainer = document.getElementById('filters');
+    
+    // Get unique categories
+    const categories = new Set();
+    works.forEach(work => {
+        categories.add(work.category);
+    });
+
+    categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.textContent = cat;
+        btn.dataset.filter = cat;
+        btn.onclick = () => handleFilterClick(btn, cat);
+        filterContainer.appendChild(btn);
+    });
+
+    // Add click handler to "All" button
+    const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if(allBtn) allBtn.onclick = (e) => handleFilterClick(e.target, 'all');
+}
+
+function handleFilterClick(btn, category) {
+    // Update active state
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Filter items
+    const filtered = category === 'all' 
+        ? allWorks 
+        : allWorks.filter(work => work.category === category);
+    
+    // Clear and re-populate
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = ''; 
+    populateGallery(filtered);
+}
+
+function setupScrollAnimation() {
+    // Disconnect old observer if needed or just create new one for new items
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Animates only once
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => observer.observe(item));
+}
+
+function populatePersonalInfo(info) {
+    document.title = `${info.name} | ${info.title}`;
+    document.getElementById('nav-name').textContent = info.name + '.';
+    document.getElementById('hero-name').textContent = info.name;
+    document.getElementById('hero-title').textContent = info.title;
+    document.getElementById('about-bio').textContent = info.bio;
+    
+    document.getElementById('footer-name').textContent = info.name;
+
+    const contactContainer = document.getElementById('contact-buttons');
+    
+    if (info.socials && info.socials.messenger) {
+        const messengerBtn = document.createElement('a');
+        messengerBtn.href = info.socials.messenger;
+        messengerBtn.target = '_blank';
+        messengerBtn.rel = 'noopener noreferrer';
+        messengerBtn.className = 'contact-btn messenger-btn';
+        messengerBtn.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            Message on Messenger
+        `;
+        contactContainer.appendChild(messengerBtn);
+    }
+
+    if (info.socials && info.socials.instagram) {
+        const instaBtn = document.createElement('a');
+        instaBtn.href = info.socials.instagram;
+        instaBtn.target = '_blank';
+        instaBtn.rel = 'noopener noreferrer';
+        instaBtn.className = 'contact-btn instagram-btn';
+        instaBtn.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            DM on Instagram
+        `;
+        contactContainer.appendChild(instaBtn);
+    }
+}
+
+function populateGallery(works) {
+    const gallery = document.getElementById('gallery');
+    
+    works.forEach((work, index) => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        // Add staggered delay for initial load if visible
+        item.style.transitionDelay = `${index * 50}ms`;
+        
+        item.onclick = () => openLightbox(work);
+
+        item.innerHTML = `
+            <img src="${work.image}" alt="${work.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/800x1000?text=Image+Not+Found'">
+            <div class="item-overlay">
+                <span class="item-category">${work.category}</span>
+                <h3 class="item-title">${work.title}</h3>
+            </div>
+        `;
+        
+        gallery.appendChild(item);
+    });
+
+    // Initialize scroll animation for these new items
+    setupScrollAnimation();
+}
+
+// Lightbox Logic
+let lightbox, lightboxImg, lightboxCaption, closeBtn;
+
+function setupLightbox() {
+    lightbox = document.getElementById('lightbox');
+    lightboxImg = document.getElementById('lightbox-img');
+    lightboxCaption = document.getElementById('lightbox-caption');
+    closeBtn = document.querySelector('.close-lightbox');
+
+    closeBtn.onclick = closeLightbox;
+
+    lightbox.onclick = function(event) {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && lightbox.style.display === 'block') {
+            closeLightbox();
+        }
+    });
+}
+
+function openLightbox(work) {
+    lightbox.style.display = 'block';
+    lightboxImg.src = work.image;
+    // Fallback if image is missing
+    lightboxImg.onerror = function() {
+        this.src = 'https://via.placeholder.com/800x1000?text=Image+Not+Found';
+    };
+    lightboxCaption.innerHTML = `<strong>${work.title}</strong><br><span style="font-size:0.9rem; font-family:var(--font-sans); color:#888;">${work.description}</span>`;
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+function closeLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
