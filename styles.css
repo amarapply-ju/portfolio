@@ -582,4 +582,16 @@ footer h2 {
     .marquee-track {
         animation-duration: 20s;
     }
+    
+    /* Mobile Filter Buttons */
+    .filter-container {
+        gap: 0.75rem;
+        margin-bottom: 3rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
 }
