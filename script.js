@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Loader Logic
     const loader = document.getElementById('preloader');
-    const minLoadTime = 800; // Adjusted for snappy feel
+    const minLoadTime = 1800; // Extended for proper loading
     const startTime = Date.now();
     let hidden = false;
 
@@ -237,13 +237,23 @@ function setupLightbox() {
 }
 
 function openLightbox(work) {
-    lightbox.style.display = 'block';
+    lightbox.style.display = 'flex'; // Changed to flex for better centering
     lightboxImg.src = work.image;
     // Fallback if image is missing
     lightboxImg.onerror = function() {
         this.src = 'https://via.placeholder.com/800x1000?text=Image+Not+Found';
     };
-    lightboxCaption.innerHTML = `<strong>${work.title}</strong><br><span style="font-size:0.9rem; font-family:var(--font-sans); color:#888;">${work.description}</span>`;
+    
+    // Create detailed caption with CTA button
+    lightboxCaption.innerHTML = `
+        <h3 style="font-size:1.5rem; margin-bottom:0.5rem; color:#fff;">${work.title}</h3>
+        <p style="font-size:1rem; font-family:var(--font-sans); color:#aaa; margin-bottom:2rem; line-height:1.6;">${work.description}</p>
+        <a href="#contact" onclick="closeLightbox()" class="lightbox-cta">
+            Want something similar?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+    `;
+    
     document.body.style.overflow = 'hidden'; // Prevent scrolling
 }
 

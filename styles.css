@@ -462,8 +462,8 @@ footer h2 {
 }
 
 .instagram-btn:hover {
-    background: var(--text-color);
-    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(188, 24, 136, 0.4);
     opacity: 1;
 }
 
@@ -474,55 +474,74 @@ footer h2 {
 
 /* Lightbox */
 .lightbox {
-    display: none;
+    display: none; /* Changed via JS to flex */
     position: fixed;
     z-index: 1000;
-    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(10px);
+    overflow-y: auto; /* Allow scrolling if content is tall */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .lightbox-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 80vh;
+    max-width: 100%;
+    max-height: 70vh; /* Leave room for caption */
     object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
     animation: zoom 0.3s ease;
 }
 
 #lightbox-caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
-    color: #ccc;
-    padding: 20px 0;
+    color: #fff;
     font-family: var(--font-serif);
-    font-size: 1.2rem;
+}
+
+.lightbox-cta {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+}
+
+.lightbox-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+    opacity: 1;
+    text-decoration: none;
+    color: #000;
 }
 
 .close-lightbox {
     position: absolute;
-    top: 30px;
-    right: 40px;
-    color: #f1f1f1;
+    top: 20px;
+    right: 30px;
+    color: #fff;
     font-size: 40px;
     font-weight: 300;
-    transition: 0.3s;
     cursor: pointer;
-}
-
-.close-lightbox:hover,
-.close-lightbox:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+    z-index: 1001;
+    line-height: 1;
 }
 
 @keyframes zoom {
@@ -552,5 +571,10 @@ footer h2 {
     }
     .hero h1 {
         font-size: 3rem;
+    }
+    
+    /* Mobile Marquee Speedup */
+    .marquee-track {
+        animation-duration: 20s;
     }
 }
