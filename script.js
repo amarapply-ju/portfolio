@@ -249,7 +249,7 @@ function openLightbox(work) {
         <h3 style="font-size:1.5rem; margin-bottom:0.5rem; color:#fff;">${work.title}</h3>
         <p style="font-size:1rem; font-family:var(--font-sans); color:#aaa; margin-bottom:2rem; line-height:1.6;">${work.description}</p>
         <a href="#contact" onclick="closeLightbox()" class="lightbox-cta">
-            Want something similar?
+            Want a similar design?
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
     `;
