@@ -182,20 +182,24 @@ a:hover {
     display: flex;
     gap: 2rem;
     width: max-content;
-    animation: marquee 40s linear infinite;
+    will-change: transform; /* Hint browser to optimize */
+    animation: marquee 60s linear infinite; /* Slower and smoother */
+    transform: translate3d(0, 0, 0); /* Force GPU acceleration */
 }
 
 @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .marquee-item {
-    height: 50vh; /* Takes up half screen height, like a film strip */
+    height: 50vh; 
     flex-shrink: 0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    /* Improve performance for items inside */
+    transform: translateZ(0);
 }
 
 .marquee-item img {
@@ -203,6 +207,8 @@ a:hover {
     width: auto;
     display: block;
     object-fit: cover;
+    /* Ensure image decoding doesn't block main thread */
+    content-visibility: auto; 
 }
 
 /* Hero Content */

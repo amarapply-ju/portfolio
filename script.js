@@ -57,24 +57,37 @@ function setupHeroMarquee(works) {
     const marqueeTrack = document.getElementById('hero-bg');
     if (!works || works.length === 0) return;
 
-    // We need enough items to scroll smoothly. If few, duplicate them.
-    let marqueeItems = [...works, ...works]; // Duplicate at least once
-    if (marqueeItems.length < 10) {
-        marqueeItems = [...marqueeItems, ...marqueeItems];
+    // Use only a subset to keep performance high if there are too many works
+    // But duplicate enough times to span screen width + buffer
+    let marqueeItems = [...works];
+
+    // Ensure we have enough items for a smooth loop (at least 10 items total)
+    while (marqueeItems.length < 10) {
+        marqueeItems = [...marqueeItems, ...works];
     }
+    
+    // Clear and rebuild
+    marqueeTrack.innerHTML = ''; 
 
-    marqueeTrack.innerHTML = ''; // Clear existing
-
-    marqueeItems.forEach(work => {
+    // Helper to create item
+    const createItem = (work) => {
         const item = document.createElement('div');
         item.className = 'marquee-item';
-        item.innerHTML = `<img src="${work.image}" alt="" loading="lazy">`;
-        marqueeTrack.appendChild(item);
+        // Eager loading for marquee images to prevent pop-in during animation
+        item.innerHTML = `<img src="${work.image}" alt="" loading="eager" decoding="async">`;
+        return item;
+    };
+
+    // 1. Append original set
+    marqueeItems.forEach(work => marqueeTrack.appendChild(createItem(work)));
+
+    // 2. Append clone set immediately (for the seamless loop effect)
+    // We clone the ENTIRE set we just created to ensure 0% -> -50% translation is perfect
+    marqueeItems.forEach(work => {
+        const clone = createItem(work);
+        clone.setAttribute('aria-hidden', 'true'); // Accessibility: hide duplicate content
+        marqueeTrack.appendChild(clone);
     });
-    
-    // Clone content for seamless loop
-    const clone = marqueeTrack.innerHTML;
-    marqueeTrack.innerHTML += clone;
 }
 
 // FILTERS
