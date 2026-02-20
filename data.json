@@ -57,6 +57,13 @@
       "category": "Product Design",
       "image": "assets/images/product poster.png",
       "description": "Showcase design for a product or service."
+    },
+    {
+      "id": 8,
+      "title": "Label design",
+      "category": "Label design",
+      "image": "assets/images/label.png",
+      "description": "Label design for a organic hair oil product."
     }
   ]
 }
