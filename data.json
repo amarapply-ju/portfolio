@@ -11,80 +11,52 @@
   "works": [
     {
       "id": 1,
-      "title": "Jersey Design - Front",
-      "category": "Apparel Design",
-      "image": "assets/images/jersey front.png",
-      "description": "Custom jersey design focusing on dynamic team branding."
+      "title": "Youtube Thumbnail Design",
+      "category": "Thumbnail Design",
+      "image": "assets/images/Youtube thumbnail.png",
+      "description": "Eye-catching thumbnail design for YouTube videos to boost click-through rates."
     },
     {
       "id": 2,
-      "title": "Jersey Design - Back",
-      "category": "Apparel Design",
-      "image": "assets/images/back jersey.png",
-      "description": "Back view of the custom jersey design."
+      "title": "Poster Design",
+      "category": "Poster Design",
+      "image": "assets/images/poster.png",
+      "description": "Creative poster design for events, promotions, or advertising campaigns."
     },
     {
       "id": 3,
-      "title": "ID Card Design",
-      "category": "Corporate Identity",
-      "image": "assets/images/id_card.jpg",
-      "description": "Professional corporate ID card layout."
+      "title": "News Card Design",
+      "category": "News Card Design",
+      "image": "assets/images/news card.png",
+      "description": "Visually appealing news card design for social media or websites to highlight key information."
     },
     {
       "id": 4,
-      "title": "Terrain Visualization",
-      "category": "3D / Visualization",
-      "image": "assets/images/with terrain.png",
-      "description": "Architectural or landscape visualization with terrain elements."
+      "title": "News Card Design",
+      "category": "News Card Design",
+      "image": "assets/images/news card 2.png",
+      "description": "Another visually appealing news card design for social media or websites to highlight key information."
     },
     {
       "id": 5,
-      "title": "Clean Visualization",
-      "category": "3D / Visualization",
-      "image": "assets/images/without terrain.png",
-      "description": "Clean architectural visualization without terrain."
+      "title": "Banner Design for an mobile app",
+      "category": "Banner design",
+      "image": "assets/images/1.png",
+      "description": "Banner design for a mobile app to promote features or updates."
     },
     {
       "id": 6,
-      "title": "Profile Graphic",
-      "category": "Social Media",
-      "image": "assets/images/elev profile maruf.png",
-      "description": "Custom profile graphic design."
+      "title": "Banner Design for an mobile app",
+      "category": "Banner design",
+      "image": "assets/images/2.png",
+      "description": "Another banner design for a mobile app to promote features or updates."
     },
     {
       "id": 7,
-      "title": "Circle Graphic",
-      "category": "Branding",
-      "image": "assets/images/circle 23 maruf.png",
-      "description": "Circular badge or logo design."
-    },
-    {
-      "id": 8,
-      "title": "Front View Design",
+      "title": "Product showcase design",
       "category": "Product Design",
-      "image": "assets/images/front.png",
-      "description": "Front view of product or apparel."
-    },
-    {
-      "id": 9,
-      "title": "Back View Design",
-      "category": "Product Design",
-      "image": "assets/images/back.png",
-      "description": "Back view of product or apparel."
-    },
-    {
-      "id": 10,
-      "title": "Graphic Element i5",
-      "category": "Illustration",
-      "image": "assets/images/i5.png",
-      "description": "Custom graphic element or illustration."
-    },
-    {
-      "id": 11,
-      "title": "Project Showcase",
-      "category": "Miscellaneous",
-      "image": "assets/images/WhatsApp Image 2025-04-13 at 6.30.17 PM.jpeg",
-      "description": "Recent project showcase."
+      "image": "assets/images/product poster.png",
+      "description": "Showcase design for a product or service."
     }
   ]
 }
