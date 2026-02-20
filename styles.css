@@ -159,7 +159,8 @@ a:hover {
     border: none;
     cursor: pointer;
     padding: 5px;
-    z-index: 101;
+    z-index: 1000;
+    position: relative;
 }
 
 .mobile-menu-toggle span {
@@ -492,15 +493,10 @@ footer h2 {
 }
 
 .instagram-btn:hover {
-    background-color: white;
-    background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(188, 24, 136, 0.4);
     opacity: 1;
+    filter: brightness(1.1);
 }
 
 .copyright {
@@ -616,6 +612,7 @@ footer h2 {
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
         padding: 2rem;
+        z-index: 999;
     }
     
     .nav-links.active {
