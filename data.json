@@ -64,6 +64,20 @@
       "category": "Label design",
       "image": "assets/images/label.png",
       "description": "Label design for a organic hair oil product."
+    },
+    {
+      "id": 9,
+      "title": "poster for election campaign",
+      "category": "Poster Design",
+      "image": "assets/images/elction poster.png",
+      "description": "Poster design for an election campaign."
+    },
+    {
+      "id": 10,
+      "title": "poster for election campaign",
+      "category": "Poster Design",
+      "image": "assets/images/election poster 2.png",
+      "description": "Poster design for an election campaign."
     }
   ]
 }
