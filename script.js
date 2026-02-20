@@ -2,6 +2,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Loader Logic
+    const loader = document.getElementById('preloader');
+    const minLoadTime = 800; // Adjusted for snappy feel
+    const startTime = Date.now();
+    let hidden = false;
+
+    function hideLoader() {
+        if (hidden) return;
+        hidden = true;
+        
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, minLoadTime - elapsedTime);
+
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+            // Remove from DOM after transition
+            setTimeout(() => {
+                if(loader) loader.style.display = 'none'; 
+            }, 600); 
+        }, remainingTime);
+    }
+
+    // Use window load to ensure images are ready
+    if (document.readyState === 'complete') {
+        hideLoader();
+    } else {
+        window.addEventListener('load', hideLoader);
+        setTimeout(hideLoader, 3000); // Fallback
+    } 
+
     // Fetch data and populate portfolio
     fetch('data.json')
         .then(response => response.json())

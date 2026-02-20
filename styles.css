@@ -3,8 +3,85 @@
     --text-color: #111111;
     --text-muted: #666666;
     --accent-color: #000000;
+    --nav-bg: rgba(250, 250, 250, 0.9);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --card-bg: #ffffff;
     --font-sans: 'Inter', sans-serif;
     --font-serif: 'Playfair Display', serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #111111;
+        --text-color: #eeeeee;
+        --text-muted: #aaaaaa;
+        --accent-color: #ffffff;
+        --nav-bg: rgba(17, 17, 17, 0.9);
+        --border-color: rgba(255, 255, 255, 0.1);
+        --card-bg: #1c1c1c;
+    }
+    
+    .gallery-item {
+        background-color: var(--card-bg) !important;
+        border-color: var(--border-color) !important;
+    }
+
+    /* Keep footer dark in dark mode or invert?
+       Currently footer is bg: text-color (#eee) -> light footer in dark mode?
+       If text-color is #eee, footer bg becomes #eee (light grey). Text becomes #111 (dark).
+       This creates a "Light" footer in Dark mode. That's a valid style choice (contrast).
+       Let's stick with it for now.
+    */
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.loader-line {
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 0 auto;
+    animation: lineGrow 1.5s ease-in-out forwards 0.5s;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineGrow {
+    to { width: 100px; }
+}
+
+body.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
 }
 
 * {
@@ -50,7 +127,7 @@ a:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(250, 250, 250, 0.9);
+    background: var(--nav-bg); /* Updated */
     backdrop-filter: blur(10px);
     z-index: 100;
 }
@@ -202,7 +279,7 @@ a:hover {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    background-color: #fff;
+    background-color: var(--card-bg); /* updated */
     break-inside: avoid;
     margin-bottom: 2rem;
     border-radius: 16px;
@@ -210,7 +287,7 @@ a:hover {
     transform: translateY(40px);
     opacity: 0;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, box-shadow 0.4s ease;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color); /* updated */
 }
 
 .gallery-item.visible {
