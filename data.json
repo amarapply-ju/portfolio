@@ -10,6 +10,20 @@
   },
   "works": [
     {
+      "id": -1,
+      "title": "Frame poster design",
+      "category": "frame poster design",
+      "image": "assets/images/poster002.png",
+      "description": "A visually striking frame poster design for a creative project."
+    },
+    {
+      "id": 0,
+      "title": "Frame poster design",
+      "category": "frame poster design",
+      "image": "assets/images/poster001.png",
+      "description": "A visually striking frame poster design for a creative project."
+    },
+    {
       "id": 1,
       "title": "Youtube Thumbnail Design",
       "category": "Thumbnail Design",
