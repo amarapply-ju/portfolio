@@ -1,97 +1,136 @@
 {
   "personalInfo": {
     "name": "Maliha",
-    "title": "Graphic Designer & Visual Strategist",
-    "bio": "I don't just make things look pretty. I craft strategic visual identities that command attention, communicate value, and convert audiences into loyal clients. Let's build a brand that impossible to ignore.",
+    "title": "Custom Poster Editor & Framer",
+    "bio": "I transform your favorite posters into stunning framed art pieces. From custom editing to premium framing, I deliver ready-to-hang masterpieces that elevate your space.",
     "socials": {
       "messenger": "https://m.me/maliha.manha07",
       "instagram": "https://instagram.com/maliha.manha07"
     }
   },
+  "services": [
+    {
+      "title": "Digital Edit Only",
+      "price": "Starting at $20",
+      "description": "Color correction, upscaling, and custom text additions to your existing digital poster."
+    },
+    {
+      "title": "Print & Frame",
+      "price": "Starting at $50",
+      "description": "High-quality printing of your poster and standard framing in black, white, or natural wood."
+    },
+    {
+      "title": "The Masterpiece",
+      "price": "Starting at $90",
+      "description": "Premium museum-quality glass, custom matting, and solid wood frames for a truly elevated look."
+    }
+  ],
+  "process": [
+    {
+      "step": "1",
+      "title": "Send Your Poster",
+      "description": "Upload your digital poster or send us the physical copy."
+    },
+    {
+      "step": "2",
+      "title": "Custom Editing",
+      "description": "We enhance, resize, or stylize your poster to your exact preferences."
+    },
+    {
+      "step": "3",
+      "title": "Premium Framing",
+      "description": "Choose from our selection of high-quality frames and matting."
+    },
+    {
+      "step": "4",
+      "title": "Delivery",
+      "description": "Receive your ready-to-hang masterpiece securely packaged."
+    }
+  ],
   "works": [
     {
       "id": -1,
-      "title": "Frame poster design",
-      "category": "frame poster design",
+      "title": "Custom Framed Poster",
+      "category": "Framed Posters",
       "image": "assets/images/poster002.png",
-      "description": "A visually striking frame poster design for a creative project."
+      "description": "A visually striking custom edited poster, beautifully framed for a modern living space."
     },
     {
       "id": 0,
-      "title": "Frame poster design",
-      "category": "frame poster design",
+      "title": "Custom Framed Poster",
+      "category": "Framed Posters",
       "image": "assets/images/poster001.png",
-      "description": "A visually striking frame poster design for a creative project."
+      "description": "A visually striking custom edited poster, beautifully framed for a modern living space."
     },
     {
       "id": 1,
-      "title": "Youtube Thumbnail Design",
-      "category": "Thumbnail Design",
+      "title": "Digital Poster Edit",
+      "category": "Poster Editing",
       "image": "assets/images/Youtube thumbneil.png",
-      "description": "Eye-catching thumbnail design for YouTube videos to boost click-through rates."
+      "description": "Eye-catching digital edit of a client's poster, ready to be printed and framed."
     },
     {
       "id": 2,
-      "title": "Poster Design",
-      "category": "Poster Design",
+      "title": "Premium Framed Art",
+      "category": "Framed Posters",
       "image": "assets/images/poster.png",
-      "description": "Creative poster design for events, promotions, or advertising campaigns."
+      "description": "Creative poster edit, printed on high-quality paper and elegantly framed."
     },
     {
       "id": 3,
-      "title": "News Card Design",
-      "category": "News Card Design",
+      "title": "Mini Framed Print",
+      "category": "Mini Frames",
       "image": "assets/images/news card.png",
-      "description": "Visually appealing news card design for social media or websites to highlight key information."
+      "description": "Visually appealing mini framed print, perfect for desk or shelf display."
     },
     {
       "id": 4,
-      "title": "News Card Design",
-      "category": "News Card Design",
+      "title": "Mini Framed Print",
+      "category": "Mini Frames",
       "image": "assets/images/news card 2.png",
-      "description": "Another visually appealing news card design for social media or websites to highlight key information."
+      "description": "Another visually appealing mini framed print, perfect for desk or shelf display."
     },
     {
       "id": 5,
-      "title": "Banner Design for an mobile app",
-      "category": "Banner design",
+      "title": "Large Format Framed Poster",
+      "category": "Large Frames",
       "image": "assets/images/1.png",
-      "description": "Banner design for a mobile app to promote features or updates."
+      "description": "Large format poster edit, custom framed to make a bold statement in any room."
     },
     {
       "id": 6,
-      "title": "Banner Design for an mobile app",
-      "category": "Banner design",
+      "title": "Large Format Framed Poster",
+      "category": "Large Frames",
       "image": "assets/images/2.png",
-      "description": "Another banner design for a mobile app to promote features or updates."
+      "description": "Another large format poster edit, custom framed to make a bold statement in any room."
     },
     {
       "id": 7,
-      "title": "Product showcase design",
-      "category": "Product Design",
+      "title": "Gallery Wall Piece",
+      "category": "Framed Posters",
       "image": "assets/images/product poster.png",
-      "description": "Showcase design for a product or service."
+      "description": "Custom edited poster designed to be the centerpiece of a gallery wall."
     },
     {
       "id": 8,
-      "title": "Label design",
-      "category": "Label design",
+      "title": "Custom Print & Frame",
+      "category": "Custom Framing",
       "image": "assets/images/label.jpg",
-      "description": "Label design for a organic hair oil product."
+      "description": "Bespoke print and frame service for a client's unique artwork."
     },
     {
       "id": 9,
-      "title": "poster for election campaign",
-      "category": "Poster Design",
+      "title": "Vintage Framed Poster",
+      "category": "Vintage Frames",
       "image": "assets/images/election poster.png",
-      "description": "Poster design for an election campaign."
+      "description": "Vintage-style poster edit, paired with a classic frame for a timeless look."
     },
     {
       "id": 10,
-      "title": "poster for election campaign",
-      "category": "Poster Design",
+      "title": "Vintage Framed Poster",
+      "category": "Vintage Frames",
       "image": "assets/images/election poster 2.png",
-      "description": "Poster design for an election campaign."
+      "description": "Vintage-style poster edit, paired with a classic frame for a timeless look."
     }
   ]
 }

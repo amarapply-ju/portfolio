@@ -322,13 +322,16 @@ a:hover {
     margin-bottom: 2rem;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.05);
-    transform: translateY(40px);
-    opacity: 0;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, box-shadow 0.4s ease;
     border: 1px solid var(--border-color); /* updated */
 }
 
-.gallery-item.visible {
+.animate-on-scroll {
+    transform: translateY(40px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, box-shadow 0.4s ease;
+}
+
+.animate-on-scroll.visible {
     transform: translateY(0);
     opacity: 1;
 }
@@ -385,6 +388,134 @@ a:hover {
 .gallery-item:hover .item-category,
 .gallery-item:hover .item-title {
     transform: translateY(0);
+}
+
+/* Services Section */
+.services-section {
+    padding: 6rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.service-price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.service-desc {
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Process Section */
+.process-section {
+    padding: 6rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    margin-bottom: 6rem;
+}
+
+.process-section h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.process-step {
+    position: relative;
+}
+
+.step-number {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    color: var(--border-color);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.step-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.step-desc {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* CTA Button */
+.cta-btn {
+    display: inline-block;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 2rem;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.hero-cta {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.hero-cta:hover {
+    background-color: #f0f0f0;
 }
 
 /* About Section */

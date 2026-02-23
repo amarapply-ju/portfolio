@@ -1,6 +1,6 @@
-# Elegant Graphic Designer Portfolio
+# Custom Poster Editor & Framer Portfolio
 
-A minimalist, elegant portfolio designed for graphic designers and art directors. Built with pure HTML, CSS, and JavaScript, making it perfectly suited for free hosting on GitHub Pages.
+A minimalist, elegant portfolio designed for custom poster editors and framers. Built with pure HTML, CSS, and JavaScript, making it perfectly suited for free hosting on GitHub Pages.
 
 ## How to Update Your Portfolio (The "Manual Admin" Process)
 

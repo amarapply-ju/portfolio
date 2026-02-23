@@ -62,7 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
             populateGallery(data.works);
             // 3. Setup Marquee
             setupHeroMarquee(data.works);
-            // 4. Initial Scroll Animation setup
+            // 4. Populate Services and Process
+            if (data.services) populateServices(data.services);
+            if (data.process) populateProcess(data.process);
+            // 5. Initial Scroll Animation setup
             setupScrollAnimation();
         })
         .catch(error => console.error('Error loading portfolio data:', error));
@@ -163,7 +166,7 @@ function setupScrollAnimation() {
         });
     }, { threshold: 0.1 });
 
-    const items = document.querySelectorAll('.gallery-item');
+    const items = document.querySelectorAll('.animate-on-scroll');
     items.forEach(item => observer.observe(item));
 }
 
@@ -205,12 +208,44 @@ function populatePersonalInfo(info) {
     }
 }
 
+function populateServices(services) {
+    const servicesGrid = document.getElementById('services-grid');
+    if (!servicesGrid) return;
+    
+    services.forEach(service => {
+        const card = document.createElement('div');
+        card.className = 'service-card animate-on-scroll';
+        card.innerHTML = `
+            <h3 class="service-title">${service.title}</h3>
+            <div class="service-price">${service.price}</div>
+            <p class="service-desc">${service.description}</p>
+        `;
+        servicesGrid.appendChild(card);
+    });
+}
+
+function populateProcess(processSteps) {
+    const processGrid = document.getElementById('process-grid');
+    if (!processGrid) return;
+    
+    processSteps.forEach(step => {
+        const stepDiv = document.createElement('div');
+        stepDiv.className = 'process-step animate-on-scroll';
+        stepDiv.innerHTML = `
+            <div class="step-number">0${step.step}</div>
+            <h3 class="step-title">${step.title}</h3>
+            <p class="step-desc">${step.description}</p>
+        `;
+        processGrid.appendChild(stepDiv);
+    });
+}
+
 function populateGallery(works) {
     const gallery = document.getElementById('gallery');
     
     works.forEach((work, index) => {
         const item = document.createElement('div');
-        item.className = 'gallery-item';
+        item.className = 'gallery-item animate-on-scroll';
         // Add staggered delay for initial load if visible
         item.style.transitionDelay = `${index * 50}ms`;
         
