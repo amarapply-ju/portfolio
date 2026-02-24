@@ -72,19 +72,16 @@ def deploy():
     if not run_command("git push origin main", "Pushing to main branch"):
         return
     
-    # Step 5: Checkout gh-pages
+    # Step 5: Sync gh-pages with main (Force Update)
     if not run_command("git checkout gh-pages", "Switching to gh-pages branch"):
         return
-    
-    # Step 6: Merge from main
-    if not run_command("git merge main -m 'Deploy from main'", "Merging main into gh-pages"):
-        # If merge fails, try to abort and return to main
-        run_command("git merge --abort", "Aborting merge")
+
+    if not run_command("git reset --hard main", "Syncing gh-pages with main"):
         run_command("git checkout main", "Returning to main branch")
         return
     
-    # Step 7: Push gh-pages
-    if not run_command("git push origin gh-pages", "Pushing to gh-pages"):
+    # Step 6: Push gh-pages
+    if not run_command("git push -f origin gh-pages", "Force pushing to gh-pages"):
         run_command("git checkout main", "Returning to main branch")
         return
     
