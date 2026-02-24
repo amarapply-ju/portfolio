@@ -55,13 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
+            // Shuffle works for random order display
+            const shuffledWorks = data.works.sort(() => 0.5 - Math.random());
+
             populatePersonalInfo(data.personalInfo);
             // 1. Setup Filters first
-            setupFilters(data.works);
-            // 2. Populate Gallery initially with all works
-            populateGallery(data.works);
+            setupFilters(shuffledWorks);
+            // 2. Populate Gallery initially with shuffled works
+            populateGallery(shuffledWorks);
             // 3. Setup Marquee
-            setupHeroMarquee(data.works);
+            setupHeroMarquee(shuffledWorks);
             // 4. Populate Services and Process
             if (data.services) populateServices(data.services);
             if (data.process) populateProcess(data.process);
