@@ -11,17 +11,17 @@
   "services": [
     {
       "title": "Digital Edit Only",
-      "price": "Starting at $20",
+      "price": "Starting at 100tk",
       "description": "Color correction, upscaling, and custom text additions to your existing digital poster."
     },
     {
       "title": "Print & Frame",
-      "price": "Starting at $50",
+      "price": "Starting at 500tk",
       "description": "High-quality printing of your poster and standard framing in black, white, or natural wood."
     },
     {
       "title": "The Masterpiece",
-      "price": "Starting at $90",
+      "price": "Starting at 900tk",
       "description": "Premium museum-quality glass, custom matting, and solid wood frames for a truly elevated look."
     }
   ],
@@ -29,7 +29,7 @@
     {
       "step": "1",
       "title": "Send Your Poster",
-      "description": "Upload your digital poster or send us the physical copy."
+      "description": "Send us your desired poster."
     },
     {
       "step": "2",
@@ -131,6 +131,62 @@
       "category": "Vintage Frames",
       "image": "assets/images/election poster 2.png",
       "description": "Vintage-style poster edit, paired with a classic frame for a timeless look."
+    },
+    {
+      "id": 11,
+      "title": "Modern Abstract Frame",
+      "category": "Framed Posters",
+      "image": "assets/images/3.png",
+      "description": "A sleek modern abstract design, printed and framed in high-gloss black."
+    },
+    {
+      "id": 12,
+      "title": "Cinematic Movie Poster",
+      "category": "Poster Editing",
+      "image": "assets/images/4.png",
+      "description": "Custom edited movie poster with enhanced colors and lighting effects."
+    },
+    {
+      "id": 13,
+      "title": "Minimalist Art Print",
+      "category": "Mini Frames",
+      "image": "assets/images/5.png",
+      "description": "Minimalist digital art, framed in natural oak for a Scandinavian look."
+    },
+    {
+      "id": 14,
+      "title": "Exhibition Poster Customization",
+      "category": "Large Frames",
+      "image": "assets/images/6.png",
+      "description": "Large format exhibition poster, customized and framed for a gallery display."
+    },
+    {
+      "id": 15,
+      "title": "Typography Wall Art",
+      "category": "Framed Posters",
+      "image": "assets/images/7.png",
+      "description": "Bold typography art, printed on matte archival paper and framed."
+    },
+    {
+      "id": 16,
+      "title": "Retro Aesthetic Edit",
+      "category": "Vintage Frames",
+      "image": "assets/images/8.png",
+      "description": "Retro-inspired poster edit with grain effects, framed in a distressed wood frame."
+    },
+    {
+      "id": 17,
+      "title": "Personalized Gift Frame",
+      "category": "Custom Framing",
+      "image": "assets/images/9.png",
+      "description": "A personalized photo collage poster, framed as a perfect gift."
+    },
+    {
+      "id": 18,
+      "title": "Event Poster Series",
+      "category": "Poster Editing",
+      "image": "assets/images/10.png",
+      "description": "A series of event posters designed and edited for maximum visual impact."
     }
   ]
 }
