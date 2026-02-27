@@ -16,12 +16,12 @@
     },
     {
       "title": "Print & Frame",
-      "price": "Starting at 500tk",
+      "price": "Starting at 300tk",
       "description": "High-quality printing of your poster and standard framing in black, white, or natural wood."
     },
     {
       "title": "The Masterpiece",
-      "price": "Starting at 900tk",
+      "price": "Starting at 500tk",
       "description": "Premium museum-quality glass, custom matting, and solid wood frames for a truly elevated look."
     }
   ],
@@ -29,7 +29,7 @@
     {
       "step": "1",
       "title": "Send Your Poster",
-      "description": "Send us your desired poster."
+      "description": "Send us your desired poster from our works or any reference image you have."
     },
     {
       "step": "2",
@@ -49,144 +49,88 @@
   ],
   "works": [
     {
-      "id": -1,
-      "title": "Custom Framed Poster",
-      "category": "Framed Posters",
-      "image": "assets/images/poster002.png",
-      "description": "A visually striking custom edited poster, beautifully framed for a modern living space."
-    },
-    {
-      "id": 0,
-      "title": "Custom Framed Poster",
+      "id": 1,
+      "title": "Custom Framed Poster 1",
       "category": "Framed Posters",
       "image": "assets/images/poster001.png",
       "description": "A visually striking custom edited poster, beautifully framed for a modern living space."
     },
     {
-      "id": 1,
-      "title": "Digital Poster Edit",
-      "category": "Poster Editing",
-      "image": "assets/images/Youtube thumbneil.png",
-      "description": "Eye-catching digital edit of a client's poster, ready to be printed and framed."
-    },
-    {
       "id": 2,
-      "title": "Premium Framed Art",
+      "title": "Custom Framed Poster 2",
       "category": "Framed Posters",
-      "image": "assets/images/poster.png",
-      "description": "Creative poster edit, printed on high-quality paper and elegantly framed."
+      "image": "assets/images/poster002.png",
+      "description": "A visually striking custom edited poster, beautifully framed for a modern living space."
     },
     {
       "id": 3,
-      "title": "Mini Framed Print",
-      "category": "Mini Frames",
-      "image": "assets/images/news card.png",
-      "description": "Visually appealing mini framed print, perfect for desk or shelf display."
+      "title": "Custom Framed Poster 3",
+      "category": "Framed Posters",
+      "image": "assets/images/poster003.png",
+      "description": "Premium framed poster, perfect for home or office decor."
     },
     {
       "id": 4,
-      "title": "Mini Framed Print",
-      "category": "Mini Frames",
-      "image": "assets/images/news card 2.png",
-      "description": "Another visually appealing mini framed print, perfect for desk or shelf display."
+      "title": "Custom Framed Poster 4",
+      "category": "Framed Posters",
+      "image": "assets/images/poster004.png",
+      "description": "Eye-catching poster design, expertly framed to enhance its visual appeal."
     },
     {
       "id": 5,
-      "title": "Large Format Framed Poster",
-      "category": "Large Frames",
-      "image": "assets/images/1.png",
-      "description": "Large format poster edit, custom framed to make a bold statement in any room."
+      "title": "Custom Framed Poster 5",
+      "category": "Framed Posters",
+      "image": "assets/images/poster005.png",
+      "description": "Modern and stylish framed poster, adding a touch of elegance to any room."
     },
     {
       "id": 6,
-      "title": "Large Format Framed Poster",
-      "category": "Large Frames",
-      "image": "assets/images/2.png",
-      "description": "Another large format poster edit, custom framed to make a bold statement in any room."
+      "title": "Custom Framed Poster 6",
+      "category": "Framed Posters",
+      "image": "assets/images/poster006.png",
+      "description": "High-quality poster print, encased in a durable and attractive frame."
     },
     {
       "id": 7,
-      "title": "Gallery Wall Piece",
+      "title": "Custom Framed Poster 7",
       "category": "Framed Posters",
-      "image": "assets/images/product poster.png",
-      "description": "Custom edited poster designed to be the centerpiece of a gallery wall."
+      "image": "assets/images/poster007.png",
+      "description": "Unique poster artwork, presented in a custom frame for a personalized touch."
     },
     {
       "id": 8,
-      "title": "Custom Print & Frame",
-      "category": "Custom Framing",
-      "image": "assets/images/label.jpg",
-      "description": "Bespoke print and frame service for a client's unique artwork."
+      "title": "Custom Framed Poster 8",
+      "category": "Framed Posters",
+      "image": "assets/images/poster008.png",
+      "description": "Vibrant and colorful poster, framed to protect and display the artwork beautifully."
     },
     {
       "id": 9,
-      "title": "Vintage Framed Poster",
-      "category": "Vintage Frames",
-      "image": "assets/images/election poster.png",
-      "description": "Vintage-style poster edit, paired with a classic frame for a timeless look."
+      "title": "Custom Framed Poster 9",
+      "category": "Framed Posters",
+      "image": "assets/images/poster009.png",
+      "description": "Classic poster design, framed with precision and care for a timeless look."
     },
     {
       "id": 10,
-      "title": "Vintage Framed Poster",
-      "category": "Vintage Frames",
-      "image": "assets/images/election poster 2.png",
-      "description": "Vintage-style poster edit, paired with a classic frame for a timeless look."
+      "title": "Custom Framed Poster 10",
+      "category": "Framed Posters",
+      "image": "assets/images/poster010.png",
+      "description": "Contemporary framed poster, ideal for modern interiors and art collections."
     },
     {
       "id": 11,
-      "title": "Modern Abstract Frame",
+      "title": "Custom Framed Poster 11",
       "category": "Framed Posters",
-      "image": "assets/images/3.png",
-      "description": "A sleek modern abstract design, printed and framed in high-gloss black."
+      "image": "assets/images/poster011.png",
+      "description": "Artistic poster creation, framed to highlight the intricate details and colors."
     },
     {
       "id": 12,
-      "title": "Cinematic Movie Poster",
-      "category": "Poster Editing",
-      "image": "assets/images/4.png",
-      "description": "Custom edited movie poster with enhanced colors and lighting effects."
-    },
-    {
-      "id": 13,
-      "title": "Minimalist Art Print",
-      "category": "Mini Frames",
-      "image": "assets/images/5.png",
-      "description": "Minimalist digital art, framed in natural oak for a Scandinavian look."
-    },
-    {
-      "id": 14,
-      "title": "Exhibition Poster Customization",
-      "category": "Large Frames",
-      "image": "assets/images/6.png",
-      "description": "Large format exhibition poster, customized and framed for a gallery display."
-    },
-    {
-      "id": 15,
-      "title": "Typography Wall Art",
+      "title": "Custom Framed Poster 12",
       "category": "Framed Posters",
-      "image": "assets/images/7.png",
-      "description": "Bold typography art, printed on matte archival paper and framed."
-    },
-    {
-      "id": 16,
-      "title": "Retro Aesthetic Edit",
-      "category": "Vintage Frames",
-      "image": "assets/images/8.png",
-      "description": "Retro-inspired poster edit with grain effects, framed in a distressed wood frame."
-    },
-    {
-      "id": 17,
-      "title": "Personalized Gift Frame",
-      "category": "Custom Framing",
-      "image": "assets/images/9.png",
-      "description": "A personalized photo collage poster, framed as a perfect gift."
-    },
-    {
-      "id": 18,
-      "title": "Event Poster Series",
-      "category": "Poster Editing",
-      "image": "assets/images/10.png",
-      "description": "A series of event posters designed and edited for maximum visual impact."
+      "image": "assets/images/poster012.png",
+      "description": "Sophisticated framed poster, making a bold statement in any setting."
     }
   ]
 }
